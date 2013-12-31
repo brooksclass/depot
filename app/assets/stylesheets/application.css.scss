@@ -11,6 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+ 
 #banner {
   background: #9c9;
   padding: 10px;
@@ -37,7 +39,7 @@
   background: #141;
 
   #main {
-    margin-left: 17em;
+    margin-left: 20em;
     padding: 1em;
     background: white;
   }
@@ -47,6 +49,11 @@
     padding: 1em 2em;
     width: 13em;
     background: #141;
+
+    #time {
+    color: #bfb;
+    font:  70% sans-serif;
+    }
 	
     ul {
       padding: 0;
