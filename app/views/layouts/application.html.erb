@@ -20,11 +20,42 @@
     <div id="side">
       <div id="time"> <%= Time.now.httpdate %></div>
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><a href="http://localhost:3000">Home</a></li>
+        <li><a href="http://localhost:3000">Questions</a></li>
+        <li><a href="http://localhost:3000">News</a></li>
+        <li><a href="http://localhost:3000">Contact</a></li>
       </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th><div id="time">Session key:value</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% session.to_hash.each do |k,v| %>
+            <tr>
+              <td><div id="time"><%= k %> :  <%= v %></div></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </br>
+      <table>
+        <thead>
+          <tr>
+            <th><div id="time">Params key:value</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% params.each do |k,v| %>
+            <tr>
+              <td><div id="time"><%= k %> :  <%= v %></div></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
     </div>
     
     <div id="main">
