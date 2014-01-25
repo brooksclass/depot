@@ -27,6 +27,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    session[:count] = 0
     product = Product.find(params[:product_id])
     @line_item = product.line_items.build(cart: @cart)
     respond_to do |format|
