@@ -23,9 +23,12 @@
         <li><a href="http://localhost:3000">Home</a></li>
         <li><a href="http://localhost:3000">Questions</a></li>
         <li><a href="http://localhost:3000">News</a></li>
-        <li><a href="http://localhost:3000">Contact</a></li>
-      </ul>
+        <%if session[:cart_id] %>
+          <li><%=link_to('Show cart', cart_path(session[:cart_id]))%></li>
+        <%end%>
 
+      </ul>
+ 
       <table>
         <thead>
           <tr>
