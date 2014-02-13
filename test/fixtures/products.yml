@@ -1,22 +1,44 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 0
   title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
 
 two:
+  id: 1
   title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
 
-ruby: 
+ruby:
+  id: 2
   title:       Programming Ruby 1.9
   description: 
     Ruby is the fastest growing and most exciting dynamic
     language out there.  If you need to get working programs
     delivered fast, you should add Ruby to your toolbox.
   price:       49.50
-  image_url:   ruby.png 
+  image_url:   ruby.png
+
+best:
+  id: 3
+  title:       Ruby Best Practices
+  description: 
+    Increase your productivity, write better code. More text
+    that describes the books and makes you want to but it.
+  price:       37.00
+  image_url:   best.jpg
+
+worst:
+  id: 4
+  title:       Ruby Worst Practices
+  description: 
+    This is a book abour how Brooks writes Ruby code. Not DRY,
+    not idiomatic, just idiotic.
+  price:       36.00
+  image_url:   worst.png
+  

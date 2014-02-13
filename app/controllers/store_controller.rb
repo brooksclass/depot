@@ -9,4 +9,9 @@ class StoreController < ApplicationController
  	end
 
   end
+
+  def diagnostics
+  	
+  end
+
 end 
