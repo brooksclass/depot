@@ -18,17 +18,36 @@
   <div id="columns">
 
     <div id="side">
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+      </br>
       <div id="time"> <%= Time.now.httpdate %></div>
       <ul>
         <li><a href="http://localhost:3000">Home</a></li>
         <li><a href="http://localhost:3000">Questions</a></li>
         <li><a href="http://localhost:3000">News</a></li>
-        <%if session[:cart_id] %>
-          <li><%=link_to('Show cart', cart_path(session[:cart_id]))%></li>
-        <%end%>
+
         <li><%=link_to('Diagnostics', diagnostics_path)%></li>
       </ul>
+      </br>
+      <table>
+        <thead>
+          <tr>
+            <th><div id="time">Params key:value</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% params.each do |k,v| %>
+            <tr>
+              <td><div id="time"><%= k %> :  <%= v %></div></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
     </div>
+
     
     <div id="main">
       <%= yield %>
