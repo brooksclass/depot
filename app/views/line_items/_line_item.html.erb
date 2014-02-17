@@ -1,4 +1,8 @@
-    <tr>
+<% if line_item == @current_item %>
+	<tr id="current_item">
+<% else %>
+	<tr>
+<% end %>
    	  <td><%= button_to 'Delete', line_item, method: :delete, data: { confirm: 'Delete item?'} %></td>
       <td><%= line_item.quantity %>&times;</td>
       <td><%= line_item.product.title %> &nbsp;</td>

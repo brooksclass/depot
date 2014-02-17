@@ -2,12 +2,8 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<% c = session[:count] %>
-<% if c > 5 %>
-	<h1>Your Pragmatic Catalog - <%=pluralize(c,"visit")%></h1>
-<% else %>
-	<h1>Your Pragmatic Catalog</h1>
-<% end %>
+
+<h1>Your Pragmatic Catalog</h1>
 
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>
